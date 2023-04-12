@@ -1,0 +1,330 @@
+:root {
+    // Background colors
+    --main-background: #fefefe;
+    --main-background-2: #e1e1e1;
+    --main-overlay: #0000006e;
+
+    // Colors
+    --main-color: #010101;
+    --main-color-2: rgb(160, 160, 160);
+
+    // Transitions
+    --default-color-transition: color ease-in-out 0.2s;
+
+    // Spacing
+    --main-spacing: 0.5rem;
+}
+
+html {
+    font-size: 100%;--main-background: #fefefe;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.jb {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-background);
+    font-family: 'Rubik', sans-serif;
+
+    // Global transition values
+    transition: var(--default-color-transition);
+}
+
+.jb-wrapper {
+    height: 100%;
+    overflow: scroll;
+}
+
+// Navigation
+.jb-navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: var(--main-color-2);
+        text-transform: uppercase;
+        transition: color 0.2s ease-in-out;
+        margin-right: calc(2 * var(--main-spacing));
+
+        &:hover {
+            color: var(--main-color);
+        }
+    }
+}
+
+.jb-navbar-r {
+    justify-content: end;
+    
+    a {
+        margin-left: calc(2 * var(--main-spacing));
+    }
+}
+
+.jb-navbar-l {
+    justify-content: start;
+
+    a {
+        margin-right: calc(2 * var(--main-spacing));
+    }
+}
+
+.jb-navbar-m {
+    justify-content: center;
+
+    a {
+        margin-left: calc(2 * var(--main-spacing));
+        margin-right: calc(2 * var(--main-spacing));
+    }
+}
+
+.jb-navbar-mobile {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    display: none;
+
+    .jb-navbar-mobile-icon-wrapper {
+        background-color: var(--main-background);
+        width: calc(5 * var(--main-spacing));
+        height: calc(5 * var(--main-spacing));
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.1s ease-in-out;
+    }
+
+    i {
+        font-size: 1.5rem;
+        color: var(--main-color);
+    }
+}
+
+.jb-navbar-mobile-content-wrapper {
+    height: 92vh;
+    width: 100%;
+    top: 8vh;
+    position: fixed;
+    background-color: var(--main-overlay);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.jb-navbar-mobile-content {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background-2);
+    transition: translate 0.2s ease-in-out;
+
+    a {
+        margin-top: calc(2 * var(--main-spacing));
+        margin-bottom: calc(2 * var(--main-spacing));
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: var(--main-color);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jb-navbar-mobile {
+        display: flex;
+    }
+
+    .jb-navbar {
+        display: none;
+    }
+}
+
+
+
+
+// Scrolling
+
+.jb-scroll-snap-container {
+    scroll-snap-type: y mandatory;
+}
+
+.jb-scroll-snap {
+    scroll-snap-align: start;
+}
+
+
+
+// Color scheme
+
+// Backgrounds
+.jb-bg-primary {
+    background-color: var(--main-background);
+}
+
+.jb-bg-secondary {
+    background-color: green;
+}
+
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+// Flex
+.jb-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Margin, padding
+
+// Regular margin
+.jb-m-1 {
+    margin: 0.25rem;
+}
+
+.jb-m-2 {
+    margin: 0.5rem;
+}
+
+.jb-m-3 {
+    margin: 1rem;
+}
+
+.jb-m-4 {
+    margin: 1.5rem;
+}
+
+.jb-m-5 {
+    margin: 2rem;
+}
+
+.jb-m-6 {
+    margin: 2.5rem;
+}
+
+.jb-m-7 {
+    margin: 3rem;
+}
+
+// Margin x
+.jb-mx-1 {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.jb-mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.jb-mx-3 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.jb-mx-4 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.jb-mx-5 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.jb-mx-6 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.jb-mx-7 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+// Margin y
+.jb-my-1 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.jb-my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.jb-my-3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.jb-my-4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.jb-my-5 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.jb-my-6 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.jb-my-7 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+// Regular padding
+.jb-p-1 {
+    padding: 0.25rem;
+}
+
+.jb-p-2 {
+    padding: 0.5rem;
+}
+
+.jb-p-3 {
+    padding: 1rem;
+}
+
+.jb-p-4 {
+    padding: 1.5rem;
+}
+
+.jb-p-5 {
+    padding: 2rem;
+}
+
+.jb-p-6 {
+    padding: 2.5rem;
+}
+
+.jb-p-7 {
+    padding: 3rem;
+}
