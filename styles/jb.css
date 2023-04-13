@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 :root {
   --main-background: #fefefe;
   --main-background-2: #e1e1e1;
   --main-overlay: #0000006e;
-  --main-color: #010101;
+  --main-color: #1e1e1e;
   --main-color-2: rgb(160, 160, 160);
   --default-color-transition: color ease-in-out 0.2s;
   --main-spacing: 0.5rem;
+  --title-font: 'Poppins', sans-serif;
 }
 
 html {
@@ -30,6 +32,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  color: var(--main-color);
   background-color: var(--main-background);
   font-family: 'Rubik', sans-serif;
   -webkit-transition: var(--default-color-transition);
@@ -39,6 +42,12 @@ body {
 .jb-wrapper {
   height: 100%;
   overflow: scroll;
+}
+
+.jb-page {
+  width: 100%;
+  height: 100%;
+  padding: 6vh;
 }
 
 .jb-navbar {
@@ -54,6 +63,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: var(--main-background);
 }
 
 .jb-navbar a {
@@ -187,6 +197,33 @@ body {
   }
 }
 
+.jb-hero-section {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.jb-hero-section img {
+  width: 100%;
+}
+
+.jb-hero-section h2 {
+  font-family: var(--title-font);
+  font-size: 4rem;
+}
+
+.jb-hero-section-right {
+  height: 100%;
+}
+
+.jb-h2 {
+  font-family: var(--title-font);
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 .jb-scroll-snap-container {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -214,6 +251,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.jb-v-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .jb-m-1 {

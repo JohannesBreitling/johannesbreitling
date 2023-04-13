@@ -5,7 +5,7 @@
     --main-overlay: #0000006e;
 
     // Colors
-    --main-color: #010101;
+    --main-color: #1e1e1e;
     --main-color-2: rgb(160, 160, 160);
 
     // Transitions
@@ -13,6 +13,9 @@
 
     // Spacing
     --main-spacing: 0.5rem;
+
+    // Fonts
+    --title-font: 'Poppins', sans-serif;
 }
 
 html {
@@ -35,6 +38,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    color: var(--main-color);
     background-color: var(--main-background);
     font-family: 'Rubik', sans-serif;
 
@@ -47,6 +51,12 @@ body {
     overflow: scroll;
 }
 
+.jb-page {
+    width: 100%;
+    height: 100%;
+    padding: 6vh;
+}
+
 // Navigation
 .jb-navbar {
     position: fixed;
@@ -54,6 +64,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: var(--main-background);
 
     a {
         text-decoration: none;
@@ -158,6 +169,31 @@ body {
     }
 }
 
+// Hero sections
+.jb-hero-section {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        font-family: var(--title-font);
+        font-size: 4rem;
+    }
+}
+
+.jb-hero-section-right {
+    height: 100%;
+}
+
+.jb-h2 {
+    font-family: var(--title-font);
+    font-size: 4rem;
+    font-weight: bold;
+}
 
 
 
@@ -188,6 +224,7 @@ body {
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 
 // Flex
@@ -195,6 +232,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.jb-v-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //align-items: center;
 }
 
 // Margin, padding

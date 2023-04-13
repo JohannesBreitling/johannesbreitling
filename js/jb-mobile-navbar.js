@@ -1,4 +1,3 @@
-console.log("moin")
 
 const jbMobileNavbarContent = document.getElementsByClassName("jb-navbar-mobile-content")[0];
 
