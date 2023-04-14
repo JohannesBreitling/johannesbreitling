@@ -6,9 +6,12 @@
   --main-overlay: #0000006e;
   --main-color: #1e1e1e;
   --main-color-2: rgb(160, 160, 160);
+  --primary-color: #8675c7;
+  --main-color-inverted: #fefefe;
   --default-color-transition: color ease-in-out 0.2s;
   --main-spacing: 0.5rem;
   --title-font: 'Poppins', sans-serif;
+  --main-font: 'Rubik', sans-serif;
 }
 
 html {
@@ -42,6 +45,7 @@ body {
 .jb-wrapper {
   height: 100%;
   overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 .jb-page {
@@ -218,9 +222,76 @@ body {
   height: 100%;
 }
 
+.jb-input-group {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+}
+
+.jb-input-group form {
+  width: 100%;
+}
+
+.jb-input {
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: var(--main-font);
+  color: var(--main-color);
+  border-radius: 0rem;
+  border: 1px solid var(--main-color-2);
+  -webkit-transition: outline 0.1s ease-in-out;
+  transition: outline 0.1s ease-in-out;
+}
+
+::-webkit-input-placeholder {
+  color: var(--main-color-2);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--main-color-2);
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: var(--main-color-2);
+  opacity: 1;
+}
+
+::placeholder {
+  color: var(--main-color-2);
+  opacity: 1;
+}
+
+.jb-text-area:focus, .jb-text-field:focus {
+  outline: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.jb-button {
+  cursor: pointer;
+  color: var(--main-color-2);
+  background-color: #00000000;
+  text-transform: uppercase;
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.jb-button:hover {
+  background-color: var(--primary-color);
+  color: var(--main-color-inverted);
+  border: 1px solid var(--primary-color);
+}
+
 .jb-h2 {
   font-family: var(--title-font);
   font-size: 4rem;
+  font-weight: bold;
+}
+
+.jb-h3 {
+  font-family: var(--title-font);
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -362,6 +433,34 @@ body {
 .jb-my-7 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.jb-mt-1 {
+  margin-top: 0.25rem;
+}
+
+.jb-mt-2 {
+  margin-top: 0.5rem;
+}
+
+.jb-mt-3 {
+  margin-top: 1rem;
+}
+
+.jb-mt-4 {
+  margin-top: 1.5rem;
+}
+
+.jb-mt-5 {
+  margin-top: 2rem;
+}
+
+.jb-mt-6 {
+  margin-top: 2.5rem;
+}
+
+.jb-mt-7 {
+  margin-top: 3rem;
 }
 
 .jb-p-1 {

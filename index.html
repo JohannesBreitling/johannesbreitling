@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>johannesbreitling</title>
 
+    <!-- Translator module -->
+    <script defer src="./js/i18n/Translator.js"></script>
+    <script defer src="./js/i18n/translations.js"></script>
+
     <!-- jb style framework -->
     <link rel="stylesheet" href="./styles/jb.css">
     <script defer src="./js/jb.js"></script>
     <script defer src="./js/jb-full-page.js"></script>
     <script defer src="./js/jb-mobile-navbar.js"></script>
+
+    
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/5898fe8f5e.js" crossorigin="anonymous"></script>
@@ -19,10 +25,10 @@
     <div class="jb">
         <div class="jb-wrapper jb-scroll-snap-container">
             <div class="jb-navbar jb-navbar-m jb-p-3">
-                <a href="./#about">Home</a>
-                <a href="./#about">About</a>
-                <a href="./#about">Projects</a>
-                <a href="./#about">Contact</a>
+                <a data-jb-t-inner-text="navigation.home" href="./#home">Home</a>
+                <a data-jb-t-inner-text="navigation.about" href="./#about">About</a>
+                <a data-jb-t-inner-text="navigation.projects" href="./#about">Projects</a>
+                <a data-jb-t-inner-text="navigation.contact" href="./#contact">Contact</a>
             </div>
 
             <div class="jb-navbar-r jb-navbar-mobile jb-p-3 jb-bg-primary">
@@ -34,20 +40,20 @@
 
             <div class="jb-navbar-mobile-content-wrapper">
                 <div class="jb-navbar-mobile-content">
-                    <a href="./#about">Home</a>
-                    <a href="./#about">About</a>
-                    <a href="./#about">Projects</a>
-                    <a href="./#about">Contact</a>
+                    <a data-jb-t-inner-text="navigation.home" href="./#home">Home</a>
+                    <a data-jb-t-inner-text="navigation.about" href="./#about">About</a>
+                    <a data-jb-t-inner-text="navigation.projects" href="./#about">Projects</a>
+                    <a data-jb-t-inner-text="navigation.contact" href="./#contact">Contact</a>
                 </div>
             </div>
 
             <div class="jb-full-page jb-scroll-snap">
-                <div class="jb-page">
+                <div class="jb-page" id="home">
                     <div class="jb-hero-section">
                         <div class="jb-hero-section-left jb-v-center">
-                            <span class="jb-h2">Ich heiße moin</span><br>
-                            <span class="jb-h2">was geht so</span><br>
-                            <span class="jb-h2">lolo loiasdnaskdjn</span><br>
+                            <span class="jb-h2">Hallo,</span><br>
+                            <span class="jb-h2">Mein Name ist Johannes.</span><br>
+                            <span class="jb-h2">Ich liebe es zu erschaffen.</span><br>
                         </div>
                         <div class="jb-hero-section-right jb-center">
                             <img src="./assets/img/PortraitTest.png" alt="">
@@ -64,8 +70,18 @@
             </div>
     
             <div class="jb-full-page jb-scroll-snap">
-                <div class="jb-page">
-                    moinsen
+                <div class="jb-page jb-center" id="contact">
+                    <div class="jb-input-group jb-center">
+                        <form>
+                            <span class="jb-h3">Kontaktiere mich</span>
+                            <input class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Dein Name"><br>
+                            <input class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Deine Mail Adresse"><br>
+                            <input class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Betreff"><br>
+                            <textarea class="jb-input jb-text-area jb-p-3 jb-mt-2" rows="8" placeholder="Nachricht"></textarea><br>
+                            <input class="jb-input jb-button jb-mt-2 jb-p-2" type="button" value="moin">
+                        </form>
+                    </div>
+                    
                 </div>
             </div>
     
