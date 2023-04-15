@@ -16,7 +16,9 @@
     <script defer src="./js/jb-full-page.js"></script>
     <script defer src="./js/jb-mobile-navbar.js"></script>
 
-    
+    <!-- Contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="./js/contact.js"></script>
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/5898fe8f5e.js" crossorigin="anonymous"></script>
@@ -72,13 +74,20 @@
             <div class="jb-full-page jb-scroll-snap">
                 <div class="jb-page jb-center" id="contact">
                     <div class="jb-input-group jb-center">
-                        <form>
+                        <form id="jb-contact-form">
                             <span class="jb-h3">Kontaktiere mich</span>
-                            <input class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Dein Name"><br>
-                            <input class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Deine Mail Adresse"><br>
-                            <input class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Betreff"><br>
-                            <textarea class="jb-input jb-text-area jb-p-3 jb-mt-2" rows="8" placeholder="Nachricht"></textarea><br>
-                            <input class="jb-input jb-button jb-mt-2 jb-p-2" type="button" value="moin">
+                            <input name="from_name" id="jb-contact-name" class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Dein Name"><br>
+                            <input name="from_mail" id="jb-contact-mail" class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Deine Mail Adresse"><br>
+                            <input name="subject" id="jb-contact-subject" class="jb-input jb-text-field jb-p-3 jb-mt-2" type="text" placeholder="Betreff"><br>
+                            <textarea name="message" id="jb-contact-message" class="jb-input jb-text-area jb-p-3 jb-mt-2" rows="8" placeholder="Nachricht"></textarea><br>
+                            <input class="jb-input jb-button jb-mt-2 jb-p-2" type="submit" value="moin" id="contact-form-submit">
+                            <div class="jb-form-loader jb-mt-2" id="contact-form-loader"></div>
+                            <div class="jb-form-success jb-mt-2" id="contact-form-success">
+                                <span>Die Nachricht wurde erfolgreich gesendet!</span>
+                            </div>
+                            <div class="jb-form-failed jb-mt-2" id="contact-form-failed">
+                                <span>Die Nachricht konnte leider nicht gesendet werden.</span>
+                            </div>
                         </form>
                     </div>
                     

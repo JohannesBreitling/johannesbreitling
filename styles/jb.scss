@@ -8,7 +8,13 @@
     --main-color: #1e1e1e;
     --main-color-2: rgb(160, 160, 160);
     --primary-color: #8675c7;
+    --secondary-color: #4aa1b0;
     --main-color-inverted: #fefefe;
+
+    --main-success-color: #b4f095;
+    --main-success-color-2: #84c065;
+    --main-failed-color: #f9a1a1;
+    --main-failed-color-2: #d57878;
 
     // Transitions
     --default-color-transition: color ease-in-out 0.2s;
@@ -238,6 +244,59 @@ body {
         color: var(--main-color-inverted);
         border: 1px solid var(--primary-color);
     }
+
+    &:disabled {
+        background-color: #00000000;
+        cursor: progress;
+
+        &:hover {
+            background-color: #00000000;
+            color: var(--main-color-2);
+            border: 1px solid var(--main-color-2);
+            outline: none;
+        }
+    }
+}
+
+.jb-form-loader {
+    visibility: hidden;
+    height: 8px;
+    width: 100%;
+    //background-color: red;
+    background-size: 350% 100%;
+    background-image: repeating-linear-gradient(
+        75deg,
+        
+        //var(--secondary-color),
+        #6bd6b8,
+        var(--primary-color)
+    );
+
+    animation: form-loader alternate 1s infinite;
+}
+
+@keyframes form-loader {
+    0% { background-position: 0% 50% }
+    100% { background-position: 100% 50% }
+}
+
+.jb-form-failed, .jb-form-success {
+    width: 100%;
+    padding: calc(2 * var(--main-spacing));
+    color: var(--main-color);
+    font-size: 1.1rem;
+}
+
+.jb-form-failed {
+    background-color: var(--main-failed-color);
+    border: 2px solid var(--main-failed-color-2);
+    display: none;
+}
+
+.jb-form-success {
+    background-color: var(--main-success-color);
+    border: 2px solid var(--main-success-color-2);
+    visibility: hidden;
 }
 
 // Headlines

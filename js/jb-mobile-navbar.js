@@ -22,7 +22,7 @@ let updateNavbar = (open) => {
         setTimeout(() => {
             jbMobileNavbarContent.style.translate = "0 0";    
             jbMobileNavbarContentWrapper.style.backgroundColor = style.getPropertyValue("--main-overlay");
-        }, 1);
+        }, 20);
 
     } else {
         jbShowMobileNavbarContent = false;
